@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Portal do Aluno</title>
+</head>
+<body>
+    <nav id="menu-lateral">
+        <div id="menu-content">
+            <div id="user">
+                <img src="img/davi.jfif" id="user-avatar" alt="Foto de Perfil">
+    
+                <p id="user-info">
+                    <span class="item-description">
+                        Davi
+                    </span>
+                    <span class="item-description">
+                        Doutor
+                    </span>
+                </p>
+            </div>
+            <ul id="side-items">
+                <li class="item-menu active">
+                    <a href="areaAluno.html">
+                        <span class="icon"><i class="bi bi-house-door"></i></span>
+                        <span class="item-description">Home</span>
+                    </a>
+                </li>
+     
+                <li class="item-menu">
+                    <a href="cursos.html">
+                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                        <span class="item-description">Cursos</span>
+                    </a>
+                </li>
+    
+                <li class="item-menu">
+                    <a href="perfilAluno.html">
+                        <span class="icon"><i class="bi bi-person-vcard"></i></span>
+                        <span class="item-description">Perfil</span>
+                    </a>
+                </li>
+            </ul>
+
+            <button id="open-btn">
+                <i id="open-btn-icon" class="bi bi-chevron-compact-right"></i>
+            </button>
+        </div>
+
+        <div id="logout">
+            <button id="logout-btn">
+                <i class="bi bi-box-arrow-left"></i>
+                <span class="item-description">Logout</span>
+            </button>
+        </div>
+    </nav>
+</body>
+<script>
+    document.getElementById('open-btn').addEventListener('click', function(){
+    document.getElementById('menu-lateral').classList.toggle('open-menu');
+});
+</script>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        min-height: 100vh;
+        background-color: #e3e9f7;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #user-avatar{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    #menu-lateral{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        height: 100vh;
+        border-radius: 0px 18px 18px 0px;
+        position: relative;
+        transition: all .5s;
+        min-width: 82px;
+    }
+
+    #side-items{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style: none;
+    }
+
+    .item-menu{
+        padding: 14px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .item-menu.active{
+        background-color: rgb(16,34,121);;
+    }
+
+    .item-menu:hover:not(.active),
+    #logout-btn{
+        background-color: #e3e9f7;
+    }
+
+    .item-menu a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #0a0a0a;
+    }
+
+    .item-menu.active a{
+        color: #e3e9f7;
+    }
+
+    .item-menu a i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+    }
+
+    #logout{
+        border-top: 1px solid #e3e9f7;
+        padding: 17px;
+    }
+
+    #logout_btn i{
+    margin-left: 18px;
+}
+
+    #logout-btn{
+        border: none;
+        padding: 12px;
+        font-size: 14px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        border-radius: 8px;
+        text-align: start;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    #open-btn{
+        position: absolute;
+        top: 30px;
+        right: -10px;
+        background-color: rgb(16,34,121);
+        color:#e3e9f7;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #open-btn-icon{
+        transition: transform .3s ease;
+    }
+
+    .open-menu #open-btn-icon{
+        transform: rotate(180deg);
+    }
+
+    .item-description{
+        width: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        transition: width .6s;
+        height: 0px;
+    }
+
+    #menu-lateral.open-menu {
+        min-width: 15%;
+    }
+
+    #menu-lateral.open-menu .item-description{
+        width: 150px;
+        height: auto;
+    }
+
+    #menu-lateral.open-menu .item-menu{
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    #menu-content{
+        padding: 12px;
+    }
+
+    #user{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    #user-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #user-info span:last-child{
+        color: grey;
+        font-size: 12px;
+    }
+
+</style>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="barra.css">
+    <title>Curso CSS</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <button class="card-seta material-symbols-outlined" onclick="backToPage()">arrow_back</button>
+        </nav>
+    </header>
+    <div class="container swiper">
+        <h2>Curso CSS</h2>
+        <br>
+        <br>
+        <div class="bar">
+        <div class="progress">1%</div>
+        </div>
+        <br>
+        <br>
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HtVRRHoASes?si=2B5Lu77tH4RoXzU_" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tspCQqKLTbY?si=Bb8UuhOyZku7n_ki" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/U4LdM3aXxeU?si=lQe4ImTSc_zI0men" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+        
+        <div class="questionnaire">
+            <h3>Responda as perguntas a seguir:</h3>
+            <form id="quiz-form">
+                <div class="question">
+                    <label>1. O que significa a sigla CSS e qual é seu propósito em uma página web?</label><br>
+                    <input type="radio" name="q1" value="estrutura" required> CSS significa "Cascading Style Sheets" e é usado para descrever a apresentação e o layout de um documento HTML.<br>
+                    <input type="radio" name="q1" value="link"> CSS significa "Creative Style Sheets" e é usado apenas para criar links.<br>
+                    <input type="radio" name="q1" value="imagem"> CSS significa "Cascading Style Scripts" e é utilizado para inserir imagens.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>2. Como você pode aplicar estilos CSS a um elemento HTML específico?</label><br>
+                    <input type="radio" name="q2" value="color" required> Você pode aplicar estilos CSS a um elemento usando seletores.<br>
+                    <input type="radio" name="q2" value="background-color"> Você pode aplicar estilos CSS apenas a elementos com IDs.<br>
+                    <input type="radio" name="q2" value="border"> Você pode aplicar estilos CSS apenas por meio de atributos HTML.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>3. O que são seletores CSS e quais são os tipos mais comuns?</label><br>
+                    <input type="radio" name="q3" value="color" required> Seletores são maneiras de aplicar cores a elementos. Os tipos mais comuns incluem cores hexadecimais e RGB.<br>
+                    <input type="radio" name="q3" value="background-color"> Seletores são padrões usados para selecionar elementos HTML a serem estilizados. Os tipos mais comuns incluem seletores de tipo (ex: div), classe (ex: .classe) e ID (ex: #id).<br>
+                    <input type="radio" name="q3" value="border"> Seletores são scripts que ajudam a executar funções em JavaScript.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>4. Como funciona o modelo de caixa (box model) em CSS?</label><br>
+                    <input type="radio" name="q4" value="color" required> O modelo de caixa representa cada elemento como uma caixa retangular composta por margens, bordas, preenchimento (padding) e o conteúdo em si.<br>
+                    <input type="radio" name="q4" value="background-color"> O modelo de caixa é uma técnica para aplicar cores de fundo aos elementos.<br>
+                    <input type="radio" name="q4" value="border"> O modelo de caixa define a posição de um elemento na página.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>5. O que é uma folha de estilo externa e como ela difere de uma folha de estilo interna?</label><br>
+                    <input type="radio" name="q5" value="color" required> Uma folha de estilo externa é um arquivo CSS separado que pode ser linkado a múltiplas páginas HTML. Já a folha de estilo interna é definida dentro da tag "style" em um documento HTML.<br>
+                    <input type="radio" name="q5" value="background-color"> Uma folha de estilo externa é uma folha de cálculo para dados. A interna é apenas para cores.<br>
+                    <input type="radio" name="q5" value="border"> Folhas de estilo externas são usadas apenas para impressão, enquanto internas são para visualização na tela.<br>
+                </div>
+                <br>
+                <button type="submit">Enviar Respostas</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-slide-button swiper-button-prev"></div>
+    <div class="swiper-slide-button swiper-button-next"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="barra.js"></script>
+
+</body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: #102279;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    header nav{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .card-seta{
+        font-size: 27px;
+        background-color: transparent;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+</style>
+</html>

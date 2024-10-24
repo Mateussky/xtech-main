@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="barra.css">
+    <title>Curso HTML</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <button class="card-seta material-symbols-outlined" onclick="backToPage()">arrow_back</button>
+        </nav>
+    </header>
+    <div class="container swiper">
+        <h2>Curso HTML</h2>
+        <br>
+        <br>
+        <div class="bar">
+        <div class="progress">1%</div>
+        </div>
+        <br>
+        <br>
+        <h4>Parte 1/2</h4>
+        <br>
+        <br>
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fhy-5CtVkiM?si=O2Lv3VQ0GfDPQc2s"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sj0p9O85AIg?si=mdpJ2ISILU-zJsz0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MOd8PCyEB88?si=69tmLKJgOS43Nnig"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+        <h4>Parte /2</h4>
+        <br><br>
+        <div class="questionnaire">
+            <h3>Responda as perguntas a seguir:</h3>
+            <form id="quiz-form">
+                <div class="question">
+                    <label>1. O que significa a sigla HTML e qual é sua principal função?</label><br>
+                    <input type="radio" name="q1" value="estrutura" required> HTML significa "HyperText Markup Language" e é a linguagem padrão usada para criar e estruturar páginas da web.<br>
+                    <input type="radio" name="q1" value="link"> HTML significa "HyperText Multi Language" e é utilizado apenas para links.<br>
+                    <input type="radio" name="q1" value="imagem"> HTML significa "HyperText Markup Language" e é usado apenas para inserir imagens.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>2. Quais são as principais diferenças entre elementos de bloco e elementos em linha?</label><br>
+                    <input type="radio" name="q2" value="color" required> Elementos de bloco ocupam toda a largura disponível e começam em uma nova linha, enquanto elementos em linha ocupam apenas o espaço necessário e não iniciam uma nova linha.<br>
+                    <input type="radio" name="q2" value="background-color"> Elementos de bloco são sempre invisíveis, enquanto elementos em linha são sempre visíveis.<br>
+                    <input type="radio" name="q2" value="border"> Elementos de bloco podem ser empilhados, enquanto elementos em linha não podem ser empilhados.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>3. O que é a tag < !DOCTYPE> e por que é importante incluí-la em um documento HTML?</label><br>
+                    <input type="radio" name="q3" value="color" required> Informa ao navegador sobre a versão do HTML utilizada, garantindo que a página seja renderizada corretamente.<br>
+                    <input type="radio" name="q3" value="background-color"> É uma tag obrigatória para todos os elementos HTML.<br>
+                    <input type="radio" name="q3" value="border"> Serve para definir o estilo da página web.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>4. Como você pode criar um link para uma outra página web usando HTML?</label><br>
+                    <input type="radio" name="q4" value="color" required> < a href="pagina.html">Clique aqui</a><br>
+                    <input type="radio" name="q4" value="background-color"> < link href="pagina.html">Clique aqui</link><br>
+                    <input type="radio" name="q4" value="border"> < url href="pagina.html">Clique aqui</url><br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>5. O que são atributos em HTML?</label><br>
+                    <input type="radio" name="q5" value="color" required> Atributos fornecem informações adicionais sobre um elemento HTML.<br>
+                    <input type="radio" name="q5" value="background-color"> Atributos são sinônimos de tags HTML.<br>
+                    <input type="radio" name="q5" value="border"> Atributos são apenas valores de estilo CSS.<br>
+                </div>
+                <br>
+                <button type="submit">Enviar Respostas</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-slide-button swiper-button-prev"></div>
+    <div class="swiper-slide-button swiper-button-next"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="barra.js"></script>
+
+</body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: #102279;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    header nav{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .card-seta{
+        font-size: 27px;
+        background-color: transparent;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+</style>
+</html>

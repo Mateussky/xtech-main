@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="barra.css">
+    <title>Curso Crypto</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <button class="card-seta material-symbols-outlined" onclick="backToPage()">arrow_back</button>
+        </nav>
+    </header>
+    <div class="container swiper">
+        <h2>Curso Crypto</h2>
+        <br>
+        <br>
+        <div class="bar">
+        <div class="progress">1%</div>
+        </div>
+        <br>
+        <br>
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7avdgcSATXw?si=lQEuYPAGn8v-iW_0" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/t20sMmXI8fc?si=DhceMsyv6jwhB6N7" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+
+        <div class="video-container">
+            <div class="click-overlay" onclick="advanceProgress(this)"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/m3k4kvX6izo?si=j_RA_9SF3jxiydja" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+        
+        <div class="questionnaire">
+            <h3>Responda as perguntas a seguir:</h3>
+            <form id="quiz-form">
+                <div class="question">
+                    <label>1. O que é uma criptomoeda?</label><br>
+                    <input type="radio" name="q1" value="estrutura" required> Uma criptomoeda é uma moeda digital que utiliza criptografia para segurança.<br>
+                    <input type="radio" name="q1" value="link"> Uma criptomoeda é um tipo de ativo físico.<br>
+                    <input type="radio" name="q1" value="imagem"> Uma criptomoeda é uma moeda emitida por bancos centrais.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>2. O que é blockchain e como ela está relacionada às criptomoedas?</label><br>
+                    <input type="radio" name="q2" value="color" required> Blockchain é uma tecnologia que permite o registro seguro e transparente de transações em um livro-razão digital. É a base para a maioria das criptomoedas, garantindo sua segurança e integridade.<br>
+                    <input type="radio" name="q2" value="background-color"> Blockchain é um sistema de pagamento tradicional.<br>
+                    <input type="radio" name="q2" value="border"> Blockchain é uma forma de moeda digital.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>3. Como funciona o processo de mineração de criptomoedas?</label><br>
+                    <input type="radio" name="q3" value="color" required> Mineração é o processo de validar transações e adicioná-las ao blockchain. Os mineradores usam poder computacional para resolver problemas matemáticos complexos e, em troca, recebem recompensas em criptomoedas.<br>
+                    <input type="radio" name="q3" value="background-color"> Mineração é o processo de criar novas criptomoedas sem validação.<br>
+                    <input type="radio" name="q3" value="border"> Mineração é a compra direta de criptomoedas em exchanges.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>4. O que é uma carteira de criptomoedas e como ela é utilizada?</label><br>
+                    <input type="radio" name="q4" value="color" required> Uma carteira de criptomoedas é um software ou dispositivo que permite armazenar, enviar e receber criptomoedas. Ela contém chaves públicas e privadas que permitem acesso às criptomoedas.<br>
+                    <input type="radio" name="q4" value="background-color"> Uma carteira de criptomoedas é uma plataforma de negociação.<br>
+                    <input type="radio" name="q4" value="border"> Uma carteira de criptomoedas é um tipo de moeda física.<br>
+                </div>
+                <br>
+                <div class="question">
+                    <label>5. Quais são os principais riscos associados ao investimento em criptomoedas?</label><br>
+                    <input type="radio" name="q5" value="color" required> Os principais riscos incluem alta volatilidade, falta de regulamentação, possibilidade de fraudes e hacks, e a complexidade do mercado que pode levar a decisões de investimento ruins.<br>
+                    <input type="radio" name="q5" value="background-color"> Os principais riscos incluem a garantia de retorno fixo e a proteção do governo.<br>
+                    <input type="radio" name="q5" value="border"> Os principais riscos incluem a inflação controlada e a estabilidade do mercado.<br>
+                </div>
+                <br>
+                <button type="submit">Enviar Respostas</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-slide-button swiper-button-prev"></div>
+    <div class="swiper-slide-button swiper-button-next"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="barra.js"></script>
+
+</body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: #102279;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    header nav{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .card-seta{
+        font-size: 27px;
+        background-color: transparent;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+</style>
+</html>

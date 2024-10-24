@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <CENTER>
+        <h1 class="Titulo">Cadastro</h1>
+        <br><br>
+        <form action="/cadastro" method="post">
+            <input class="input" type="nome" placeholder="Nome" id="nome" name="nome" required>
+            <br><br>
+            <input class="input" type="email" placeholder="Email" id="email" name="email" required>
+            <br><br>
+            <input class="input" type="password" placeholder="Senha" id="senha" name="senha" required>
+            <br><br>
+            <button type="submit" class="botao">Cadastrar</button>
+        </form>
+        <br>
+    </CENTER>
+</body>
+<style>
+    body {
+        background-color: brown;
+    }
+
+    .Titulo {
+        color: white;
+    }
+
+    .botao {
+        height: 40px;
+        width: 177px;
+    }
+
+    .input {
+        height: 30px;
+        width: 170px;
+    }
+</style>
+</html>
